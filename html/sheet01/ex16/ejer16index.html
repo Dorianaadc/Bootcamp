@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+            <li>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="user_name" maxlength="30" required />
+            </li>
+            <br>
+            <li>
+                <label for="apellido">Apellidos:</label>
+                <input type="text" id="apellido" name="user_apellido" maxlength="30" required />
+            </li>
+            <br>
+            <li>
+                <label for="mail">Correo electrónico:</label>
+                <input type="email" id="mail" name="user_mail" required />
+            </li>
+            <br>
+            <li>
+                <label for="asunto">Asunto:</label><br>
+                <select name="asunto" id="asunto" size="3" required>
+                    <option value="presupuesto">Pedir presupuesto</option>
+                    <option value="cita" selected>Solicitar cita previa</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </li>
+            <br>
+            <li>
+                <label for="conocido">¿Cómo nos has conocido?</label><br>
+                <select multiple name="conocido[]" id="conocido">
+                    <option value="amigo">Un amigo</option>
+                    <option value="google">Googleando</option>
+                    <option value="buzoneo">Buzoneo</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </li>
+            <br>
+            <li>
+                <label for="msg">Mensaje:</label><br>
+                <textarea id="msg" name="user_message" maxlength="300" required></textarea>
+            </li>
+            <br>
+            <li>
+                <input type="checkbox" id="rgpd" name="rgpd" required />
+                <label for="rgpd">
+                    He leído y acepto el 
+                    <a href="#" target="_blank">aviso legal</a> y la 
+                    <a href="#" target="_blank">política de privacidad</a>.
+                </label>
+            </li>
+        </ul>
+        <br>
+        <button type="submit">Ahí va eso</button>
+    </form>
+</body>
+</html>
