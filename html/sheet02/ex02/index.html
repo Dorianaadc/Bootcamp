@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <fieldset>
+        <legend>Información personal:</legend>
+      <form action="formulario" method="get">
+        <ul>
+          <li>Nombre:</li>
+          <input type="text" name="nombre" required />
+          <li>Apellidos:</li>
+          <input type="text" name="apellidos" required />
+          <li>Fecha de nacimiento:</li>
+          <input type="date" name="fecha" required />
+          <li>Género:</li>
+          <input type="radio" name="masculino" value="masculino" required />
+          <label for="masculino">Masculino</label>
+          <input type="radio" name="femenino" value="femenino" required />
+          <label for="femenino">Femenino</label>
+          <input type="radio" name="otro" value="otro" required />
+          <label for="otro">Otro</label>
+        </ul>
+    </fieldset>
+        <fieldset>
+            <legend>Información de contacto:</legend>
+        <ul>
+          <li>Dirección de Correo Electrónico:</li>
+          <input type="text" name="correo" required />
+          <li>Número de Teléfono:</li>
+          <input type="number" name="telf" required />
+          <li>Dirección:</li>
+          <input type="text" name="direccion" required />
+        </ul>
+    </fieldset>
+<fieldset>
+    <legend>Información de cuenta:</legend>
+        <ul>
+          <li>Nombre de usuario:</li>
+          <input type="text" name="usuario" required />
+          <li>Contraseña:</li>
+          <input type="text" name="clave" required />
+        </ul>
+    </fieldset>
+        <fieldset>
+            <legend>Preferencias:</legend>
+        <p>Color favorito:</p>
+        <input type="radio" name="rojo" value="rojo"/>
+        <label for="rojo">Rojo</label><br/>
+        <input type="radio" name="azul" value="azul"/>
+        <label for="azul">Azul</label><br/>
+        <input type="radio" name="verde" value="verde"/>
+        <label for="verde">Verde</label><br/>
+        <input type="radio" name="amarillo" value="amarillo"/>
+        <label for="amarillo">Amarillo</label><br/>
+    </fieldset>
+<br/>
+        <input type="checkbox" id="aceptar" value="aceptar_checkbox" required/>
+        <label for="aceptar">Aceptar Términos y Condiciones</label>
+      </form>
+  </body>
+</html>
