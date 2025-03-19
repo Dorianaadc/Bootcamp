@@ -42,7 +42,9 @@
           <li>Nombre de usuario:</li>
           <input type="text" name="usuario" required />
           <li>Contraseña:</li>
-          <input type="text" name="clave" required />
+          <input type="text" name="clave" pattern="/^(?=.*[a-z])?{8,20}" required />
+          <li>Confirmación de Contraseña:</li>
+          <input type="text" name="clave" pattern="/^(?=.*[a-z])?{8,20}" required />
         </ul>
     </fieldset>
         <fieldset>
@@ -59,7 +61,10 @@
     </fieldset>
 <br/>
         <input type="checkbox" id="aceptar" value="aceptar_checkbox" required/>
-        <label for="aceptar">Aceptar Términos y Condiciones</label>
+        <label for="aceptar">Aceptar Términos y Condiciones</label><br>
+        <br>
+        <button type="submit">Enviar</button>
       </form>
   </body>
 </html>
+
