@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corregir</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="usuario">Usuario</label>
+        <input
+          type="text"
+          id="usuario"
+          name="usuario"
+          aria-describedby="usuario-ayuda"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="password">Contraseña</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          aria-describedby="password-ayuda"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="comentario">Comentario</label>
+        <textarea
+          id="comentario"
+          name="comentario"
+          aria-label="Escriba su comentario"
+          rows="4"
+        ></textarea>
+      </div>
+      <br />
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
