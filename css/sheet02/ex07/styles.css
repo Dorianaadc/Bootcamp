@@ -1,0 +1,12 @@
+.animate-box {
+width: 100px;
+height: 100px;
+background-color: lightcoral;
+}
+
+.animate-box:hover {
+width: 150px;
+height: 150px;
+background-color: lightcoral
+
+}
