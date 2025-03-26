@@ -1,0 +1,11 @@
+.nav{
+display: flex;
+flex-direction:row;
+justify-content:space-around;
+}
+
+button{
+    width: 100px;
+    height: 40px;
+}
+
