@@ -3,4 +3,7 @@
     height: 100px;
     background-color: red;
     margin: 10px;
+    @media (width < 500px){
+    background-color: aqua;
+    }
     }
