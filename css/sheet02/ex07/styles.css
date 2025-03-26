@@ -1,0 +1,15 @@
+.animate-box {
+width: 100px;
+height: 100px;
+background-color: lightcoral;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+font-weight: bold;
+transition: transform 0.3s ease-in-out; 
+}
+
+.animate-box:hover {
+transform: scale(1.5); 
+}

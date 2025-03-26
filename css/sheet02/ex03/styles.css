@@ -1,0 +1,19 @@
+body{
+display: flex;
+flex-direction: row; 
+height: 100vh;
+}
+
+.sidebar{
+background-color: gray;
+padding: 20px;
+padding-right: 100px;
+display: flex;
+flex-direction: row; 
+height: 100vh;
+}
+
+.main-content{
+padding: 20px;
+padding-right: 100px;
+}
