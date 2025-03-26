@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 17</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+
+      .grid-item {
+        grid-column: span 2;
+        background-color: lightblue;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+
+      .grid-container div {
+        background-color: lightgray;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">Elemento que ocupa dos columnas</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <div>Item 4</div>
+      <div>Item 5</div>
+      <div>Item 6</div>
+    </div>
+  </body>
+</html>
