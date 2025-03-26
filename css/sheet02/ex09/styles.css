@@ -1,0 +1,9 @@
+.flex-container{
+background-color: gray;
+display: flex;
+flex-direction: row;
+
+@media(width < 768px){
+flex-direction: column;
+}
+}
