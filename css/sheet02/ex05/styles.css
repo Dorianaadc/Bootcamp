@@ -1,0 +1,14 @@
+.flex-container{
+display: flex;
+justify-content: space-between;
+}
+
+.item{
+background-color: gray;
+width: 10%;
+}
+
+.item-flexible{
+background-color: gray;
+width: 70%;
+}
