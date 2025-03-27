@@ -31,6 +31,9 @@ flex-direction: column;
 justify-content: center;
 background-color:rgb(218, 216, 216);
 text-align: center;
+height: 250px;
+margin-bottom: 30px;
+padding-bottom: 50px;
 }
 
 .boton-contenedor{
@@ -48,4 +51,83 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 text-align: center; 
+}
+
+.cuadrados{
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 20px;
+padding-bottom: 50px;
+}
+
+.cuadrado{
+display: flex;
+flex-direction: column;
+background-color: black;
+width: 180px;
+height: 180px;
+align-items: center;
+justify-content: center;
+}
+
+.item {
+text-align: center;
+}
+
+.ultimo-contenedor{
+margin-top: 50px;
+padding: 50px;
+background-color:rgb(218, 216, 216);
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 100px;
+}
+
+@media (width < 667px){
+.cuadrado{
+width: 100px;
+height: 100px;
+}
+.ultimo-contenedor{
+width: 100px;
+height: 100px;
+gap: 70px;
+background-color:rgb(218, 216, 216);
+}
+footer{
+display: flex;
+justify-content: space-around;
+background-color:rgb(218, 216, 216);
+padding: 0;
+margin: 0;
+}
+.texto{
+font-size: 6px;
+min-width: 0px;
+}
+}
+
+@media (width < 768px){
+.cuadrado{
+width: 100px;
+height: 100px;
+}
+.ultimo-contenedor{
+width: 100px;
+height: 100px;
+background-color:rgb(218, 216, 216);
+}
+footer{
+display: flex;
+justify-content: space-around;
+background-color:rgb(218, 216, 216);
+padding: 0;
+margin: 0;
+ }
+.texto{
+font-size: 10px;
+min-width: 0px;
+}
 }
