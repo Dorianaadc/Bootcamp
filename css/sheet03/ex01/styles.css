@@ -34,9 +34,18 @@ text-align: center;
 }
 
 .boton-contenedor{
-    background-color: black;
-    color: white;
-    width: 100px;
-    height: 50px;
-    text-align: center;
+background-color: black;
+color: white;
+text-align: center;
+display: block;
+margin: auto;
+width: 150px;
+height: 60px;
+}
+
+.segundo-contenedor{
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center; 
 }
