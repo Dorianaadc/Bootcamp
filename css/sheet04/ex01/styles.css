@@ -1,0 +1,112 @@
+body{
+    background-color: #FFE62C;
+    margin: 0;
+}
+
+.orejas{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    justify-content: space-between;
+}
+.oreja-izquierda{
+    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+    width: 60px;
+    height: 60px;
+    background: black;
+}
+.oreja-derecha{
+    margin-left: 1160px;
+    clip-path: polygon(100% 100%, 100% 0%, 0% 0%);
+    width: 60px;
+    height: 60px;
+    background: black;
+}
+
+
+.filtrador{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    padding: 20px;
+}
+
+input{ 
+    width: 300px;
+    height: 40px;
+    text-align: center; 
+}
+
+.tarjetas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tarjeta {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgb(93, 92, 92);
+    width: 10%;
+    height: 2%;
+}
+
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    padding: 2px 16px;
+}
+
+.imagen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #dfdfdf;
+}
+
+
+.texto-imagen{
+    width: max-content;
+    background-color: #d1cdca;
+    padding: 10px;
+}
+
+.boton{
+    background-color: white;
+    border: solid rgb(191, 188, 188) 1px;
+    padding: 6px;
+    width: max-content;
+    box-shadow: 0 4px 8px 0 rgb(173, 172, 172);
+}
+
+
+.cachetes{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    justify-content: space-between;
+}
+.cachete-izquierdo{
+    clip-path: circle(40%);
+    width: 80px;
+    height: 80px;
+    background: #ea2a2a;
+    margin-top: 160px;
+    margin-left: -30px;
+    margin-right: 80px;
+}
+.cachete-derecho{
+    clip-path: circle(40%);
+    width: 80px;
+    height: 80px;
+    background: #ea2a2a;
+    margin-top: 160px;
+    margin-left: 1100px;
+
+}
+
+@media (width < 667){
+.oreja-derecha{
+   margin-left: -80px;
+}
+}
