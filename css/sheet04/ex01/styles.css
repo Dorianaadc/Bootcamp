@@ -35,9 +35,11 @@ body {
 }
 
 input { 
-    width: 300px;
+    width: 470px;
     height: 40px;
     text-align: center; 
+    border: #dfdfdf;
+    background-color: #f8f3d2;
 }
 
 .tarjetas {
@@ -74,6 +76,7 @@ input {
     background-color: #d1cdca;
     padding: 5px; 
     margin-bottom: 5px; 
+    color: #6b4807;
 }
 
 .botones {
@@ -89,7 +92,6 @@ input {
     background-color: white;
     border: 1px solid #6b4807;
     padding: 4px; 
-    box-shadow: 0 4px 8px rgb(173, 172, 172);
     cursor: pointer;
     line-height: 10px;
     font-size: 12px;
@@ -100,10 +102,10 @@ input {
     margin-bottom: 10px;
    line-height: 0px;
    font-size: 14px;
-   border-left: #6b4807 3px solid;
+   border-left: #6b4807 2px solid;
    padding-left: 6px;
-   width: max-content;
-   
+   padding-top: 10px;
+   height: max-content;
 }
 
 p1{
