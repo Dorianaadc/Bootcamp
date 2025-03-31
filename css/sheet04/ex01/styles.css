@@ -1,22 +1,25 @@
-body{
+body {
     background-color: #FFE62C;
     margin: 0;
+    font-family: ubuntu;
 }
 
-.orejas{
+.orejas {
     display: flex;
-    flex-direction: row;
-    position: fixed;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
 }
-.oreja-izquierda{
+
+.oreja-izquierda {
     clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
     width: 60px;
     height: 60px;
     background: black;
 }
+
 .oreja-derecha{
-    margin-left: 1160px;
+    margin-left: 1040px;
     clip-path: polygon(100% 100%, 100% 0%, 0% 0%);
     width: 60px;
     height: 60px;
@@ -24,89 +27,175 @@ body{
 }
 
 
-.filtrador{
+.filtrador {
     display: flex;
     flex-direction: row;
     justify-content: center; 
     padding: 20px;
 }
 
-input{ 
+input { 
     width: 300px;
     height: 40px;
     text-align: center; 
 }
 
-.tarjetas{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.tarjetas {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    padding: 10px;
+    max-width: 500px; 
+    margin: 0 auto; 
 }
 
 .tarjeta {
     background-color: white;
     box-shadow: 0 4px 8px 0 rgb(93, 92, 92);
-    width: 10%;
-    height: 2%;
+    width: calc(33.33% - 10px);
+    max-width: 150px; 
+    margin: 5px; 
 }
 
-
-.contenido{
+.contenido {
     display: flex;
     flex-direction: column;
-    padding: 2px 16px;
-}
-
-.imagen{
-    display: flex;
-    flex-direction: column;
+    align-items: center; 
     justify-content: center;
+    line-height: 0px;
+}
+
+.imagen {
     background-color: #dfdfdf;
 }
 
-
-.texto-imagen{
+.texto-imagen {
     width: max-content;
     background-color: #d1cdca;
-    padding: 10px;
+    padding: 5px; 
+    margin-bottom: 5px; 
 }
 
-.boton{
-    background-color: white;
-    border: solid rgb(191, 188, 188) 1px;
-    padding: 6px;
-    width: max-content;
-    box-shadow: 0 4px 8px 0 rgb(173, 172, 172);
-}
-
-
-.cachetes{
+.botones {
     display: flex;
     flex-direction: row;
-    position: fixed;
+    justify-content: center;
+    gap: 5px; 
+    margin-top: 5px; 
+    
+}
+
+.boton {
+    background-color: white;
+    border: 1px solid #6b4807;
+    padding: 4px; 
+    box-shadow: 0 4px 8px rgb(173, 172, 172);
+    cursor: pointer;
+    line-height: 10px;
+    font-size: 12px;
+    color: #6b4807;
+}
+
+.evolucion{
+    margin-bottom: 10px;
+   line-height: 0px;
+   font-size: 14px;
+   border-left: #6b4807 3px solid;
+   padding-left: 6px;
+   width: max-content;
+   
+}
+
+p1{
+    color: #6b4807;
+}
+
+.cachetes {
+    display: flex;
     justify-content: space-between;
-}
-.cachete-izquierdo{
-    clip-path: circle(40%);
-    width: 80px;
-    height: 80px;
-    background: #ea2a2a;
-    margin-top: 160px;
-    margin-left: -30px;
-    margin-right: 80px;
-}
-.cachete-derecho{
-    clip-path: circle(40%);
-    width: 80px;
-    height: 80px;
-    background: #ea2a2a;
-    margin-top: 160px;
-    margin-left: 1100px;
-
+    position: fixed;
+    width: 100%;
+    bottom: -40px;
 }
 
-@media (width < 667){
-.oreja-derecha{
-   margin-left: -80px;
+.cachete-izquierdo, .cachete-derecho {
+    clip-path: circle(50%);
+    width: 140px;
+    height: 140px;
+    background: #ea2a2a;
 }
+
+.cachete-izquierdo {
+    margin-left: -80px;
+}
+
+.cachete-derecho {
+    margin-right: -80px;
+}
+
+@media (width < 375px) {
+    .tarjetas {
+        width: 40%; 
+    }
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+    .oreja-derecha {
+        margin-right: -100px; 
+        
+    }
+    .oreja-izquierda {
+        margin-left: auto; 
+        margin-right: -50px;
+        
+    }
+    .cachete-izquierdo, .cachete-derecho{
+      margin-bottom: -30px;
+    }
+    input{
+        width: 70%;
+    }
+    
+}
+
+@media (max-width: 667px) {
+    .tarjeta {
+        width: 50%; 
+    }
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+    .oreja-derecha {
+        margin-left: 370px; 
+    }
+}
+
+@media (max-width: 882px) {
+    .tarjeta {
+        width: 90%; 
+    }
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .oreja-derecha {
+        margin-left: 370px; 
+    }
+}
+
+@media (max-width: 1024px) {
+    .tarjeta {
+        width: 90%; 
+    }
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .oreja-derecha {
+        margin-left: 370px; 
+    }
 }
