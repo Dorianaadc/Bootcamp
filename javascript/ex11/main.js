@@ -14,14 +14,34 @@ En caso de que el texto no esté vacío se añadirá a la lista.*/
 
 let campoTexto = document.getElementById("campo");
 let boton = document.getElementById("boton");
-let li = document.createElement("li"); lista.appendChild(li);
 
 boton.addEventListener("click", function agregarElemento() {
-li.value = campoTexto;
-    });
-    
+  let texto = campoTexto.value.trim(); 
+
+  if (texto !== "") {
+    let lista = document.getElementById("lista");
+    let nuevoElemento = document.createElement("li");
+    nuevoElemento.textContent = texto;
+    lista.appendChild(nuevoElemento);
+
+    campoTexto.value = ""; 
+    campoTexto.focus(); 
+  } else {
+    alert("El texto no puede estar vacío");
+  }
+});
 
 
 /*Crea una página HTML magia.html con un elemento de tipo <div> . Escribe
 un script que cambie el color de fondo de ese div cuando se pase el ratón sobre él 
 y lo restablezca cuando el ratón se retire.*/
+
+let divFondo = document.querySelector(".fondo");
+
+divFondo.addEventListener("mouseover", function() {
+  divFondo.style.backgroundColor = "blue"; 
+});
+
+divFondo.addEventListener("mouseout", function() {
+  divFondo.style.backgroundColor = "rgb(142, 52, 225)"; 
+});

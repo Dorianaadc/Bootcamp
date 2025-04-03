@@ -1,0 +1,18 @@
+.numeros{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+p{
+    display: flex;
+    justify-content: center;
+}
