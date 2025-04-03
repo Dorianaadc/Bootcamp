@@ -5,3 +5,12 @@ nuevo array con los números impares. Pista: usa filter .
 const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(filtrarImpares(numeros)); // [1, 3, 5, 7, 9]
 */
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+function filtrarImpares(numeros){
+    return numeros.filter(numero => numero % 2 !== 0);
+}
+console.log(filtrarImpares(numeros)); 
+
+
+
