@@ -10,11 +10,13 @@ const texto = "Hola Mundo";
 let contar = 0;
 
 function contarVocales(texto){
-vocales.forEach(letra => {
-if(texto.incluides(letra)){
-contar++;
-}
+vocales.forEach(element => {
+    if(texto.includes(element)){
+           contar++;  
+    }
 });
-return contar;
+
+console.log(contar)
 }
-console.log(contarVocales(texto));
+
+console.log(contarVocales(texto))

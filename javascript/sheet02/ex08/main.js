@@ -7,3 +7,14 @@ const numeros = [1, 2, 3, 2, 4, 1, 5];
 console.log(removerDuplicados(numeros)); // [1, 2, 3, 4, 5]
 */
 
+const numeros = [1, 2, 3, 2, 4, 1, 5];
+const conjunto = new Set();
+
+function removerDuplicados(numeros){
+for (let i = 0; i < numeros.length; i++) {
+ conjunto.add(numeros[i]);
+}
+console.log(conjunto)
+}
+
+console.log(removerDuplicados(numeros));
