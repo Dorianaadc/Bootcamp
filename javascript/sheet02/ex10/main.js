@@ -5,3 +5,11 @@ larga. Pista: Usa reduce .
 const palabras = ["hola", "mundo", "javascript", "programac
 ión"];
 console.log(palabraMasLarga(palabras)); // "programación"*/
+
+const palabras = ["hola", "mundo", "javascript", "programación"];
+
+function palabraMasLarga(){
+
+}
+
+console.log(palabraMasLarga(palabras));
