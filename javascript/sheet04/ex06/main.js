@@ -7,3 +7,24 @@ incrementar le añadirá uno.
 3. El contador tiene que irse actualizando en pantalla cada vez que pulso un
 botón.
 */
+
+let incrementar = document.getElementById("incrementar");
+let descrementar = document.getElementById("descrementar");
+let contador = document.getElementById("contador");
+contador.textContent = 0;
+
+let tiempo = 0;
+
+let intervalo = setInterval(function() {
+tiempo++;
+contador.textContent = tiempo + " segundos";
+}, 1000); 
+
+
+incrementar.addEventListener('click', function(){
+contador.textContent = (tiempo + 1) + " segundos";
+});
+
+descrementar.addEventListener('click', function(){
+contador.textContent = (tiempo - 1) + " segundos";
+});
