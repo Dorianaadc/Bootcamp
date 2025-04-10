@@ -8,3 +8,7 @@ En main.js , importa ambas funciones y muestra:
 3 + 4 = 7
 3 × 4 = 12*/
 
+import { suma, multiplica } from "./mathUtils.js";
+
+console.log(`3 + 4 = ${suma(3, 4)}`);
+console.log(`3 × 4 = ${multiplica(3, 4)}`);
