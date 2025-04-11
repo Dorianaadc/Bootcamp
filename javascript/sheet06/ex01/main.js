@@ -1,5 +1,5 @@
-import { mostrarNombres } from "./ui.js";
+import { mostrarPokemones } from "./ui.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  mostrarNombres();
+  mostrarPokemones();
 });

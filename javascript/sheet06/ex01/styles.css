@@ -67,6 +67,59 @@ input {
     line-height: 0px;
 }
 
+
+.imagen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self:normal;
+    background-color: #dfdfdf;
+}
+
+.texto-imagen {
+    display: flex;
+    align-self: start;
+    width: max-content;
+    background-color: #d1cdca;
+    padding: 5px; 
+    margin-bottom: 5px; 
+    color: #6b4807;
+    font-weight: bold;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px; 
+    margin-top: 5px; 
+    
+}
+
+.boton {
+    background-color: white;
+    border: 1px solid #6b4807;
+    padding: 4px; 
+    cursor: pointer;
+    line-height: 10px;
+    font-size: 12px;
+    color: #6b4807;
+}
+
+.evolucion{
+   margin-bottom: 10px;
+   line-height: 0px;
+   font-size: 14px;
+   border-left: #6b4807 2px solid;
+   padding-left: 6px;
+   padding-top: 10px;
+   height: max-content;
+}
+
+p1{
+    color: #6b4807;
+}
+
 .cachetes {
     display: flex;
     justify-content: space-between;
@@ -89,7 +142,6 @@ input {
 .cachete-derecho {
     margin-right: -80px;
 }
-
 
 @media (width < 375px) {
     .tarjetas {
