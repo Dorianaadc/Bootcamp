@@ -45,7 +45,7 @@ export async function mostrarPokemones() {
     contenido.appendChild(contenedorImagen);
     contenido.appendChild(nombre);
     contenido.appendChild(tipos);
-
+ 
     const evolucionData = await getEvolucion(data.id);
 
     if (evolucionData) {
@@ -61,8 +61,10 @@ export async function mostrarPokemones() {
       const posicion = nombres.indexOf(data.name.toLowerCase());
       if (posicion > 0) {
         const labelEvo = document.createElement("p");
+        
         labelEvo.textContent = "Evoluciona de:";
-        labelEvo.style.fontWeight = "bold";
+        labelEvo.style.color = "#a17a2f";
+        labelEvo.style.fontSize = "12px";
 
         const textoEvo = document.createElement("p");
         textoEvo.classList.add("evolucion");
@@ -77,3 +79,4 @@ export async function mostrarPokemones() {
     contenedor.appendChild(tarjeta);
   }
 }
+
