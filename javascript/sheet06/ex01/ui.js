@@ -1,11 +1,9 @@
-import { getApi, getEvolucionPokemon } from "./api.js";
+import { getApi, getEvolucion } from "./api.js";
 
 export async function mostrarPokemones() {
   const json = await getApi();
-  console.log(json);
-
   const contenedor = document.querySelector(".tarjetas");
-  contenedor.innerHTML = ""; 
+  contenedor.innerHTML = "";
 
   for (const pokemon of json.results) {
     const res = await fetch(pokemon.url);
@@ -44,25 +42,38 @@ export async function mostrarPokemones() {
       tipos.appendChild(tipo);
     });
 
-    contenido.appendChild(contenedorImagen); 
+    contenido.appendChild(contenedorImagen);
     contenido.appendChild(nombre);
     contenido.appendChild(tipos);
+
+    const evolucionData = await getEvolucion(data.id);
+
+    if (evolucionData) {
+      const cadena = evolucionData.chain;
+      let nombres = [cadena.species.name];
+
+      let actual = cadena;
+      while (actual.evolves_to.length > 0) {
+        actual = actual.evolves_to[0];
+        nombres.push(actual.species.name);
+      }
+
+      const posicion = nombres.indexOf(data.name.toLowerCase());
+      if (posicion > 0) {
+        const labelEvo = document.createElement("p");
+        labelEvo.textContent = "Evoluciona de:";
+        labelEvo.style.fontWeight = "bold";
+
+        const textoEvo = document.createElement("p");
+        textoEvo.classList.add("evolucion");
+        textoEvo.textContent = nombres[posicion - 1];
+
+        contenido.appendChild(labelEvo);
+        contenido.appendChild(textoEvo);
+      }
+    }
+
     tarjeta.appendChild(contenido);
     contenedor.appendChild(tarjeta);
   }
-
-  const jsonEvolucion = await getEvolucionPokemon();
-  console.log(jsonEvolucion);
-
-  for (const evolucion of jsonEvolucion.results) {
-      const respuesta = await fetch(evolucion.url);
-      const datos = await respuesta.json();
-
-      const evo = document.createElement("p");
-      evo.textContent = "Evoluciona de: " + datos.name;
-
-      contenido.appendChild(evo);
-  }
 }
-
-
