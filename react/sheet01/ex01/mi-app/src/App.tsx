@@ -1,17 +1,15 @@
 import './App.css'
 import './index.css'
-import Tarjeta from './Tarjeta'
+import React from 'react';
+import ListaDeTarjetas from './componentes/ListaDeTarjetas';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <>
-<Tarjeta nombre={'Nombre: Dori'} 
-apellido={'Apellido: DaCosta'} 
-ocupacion={'Ocupación: Programadora'} 
-imagen={'https://www.cinconoticias.com/wp-content/uploads/programador-que-es-que-hace-habilidades.jpg'}>
-  </Tarjeta>
-    </>
-  )
-}
+    <div>
+      <h1 style={{ textAlign: 'center' }}>Tarjetas de Presentación</h1>
+      <ListaDeTarjetas />
+    </div>
+  );
+};
 
-export default App
+export default App;
