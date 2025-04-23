@@ -1,20 +1,20 @@
-export interface PokemonSummary {
+export interface IPokemon {
     name: string;
     url: string;
   }
   
-  export interface PokemonType {
+  export interface IPokemonType {
     type: {
       name: string;
     };
   }
   
-  export interface PokemonDetail {
+  export interface IPokemonDetail {
     id: number;
     name: string;
     sprites: {
       front_default: string;
     };
-    types: PokemonType[];
+    types: IPokemonType[];
   }
   
