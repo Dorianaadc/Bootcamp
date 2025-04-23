@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { PokemonDetail } from '../types/Pokemon.tsx';
+import { IPokemonDetail } from '../types/Pokemon.tsx';
 import { getEvolucion } from '../services/PokemonService.tsx';
 
-interface Props {
-  pokemon: PokemonDetail;
+interface IProps {
+  pokemon: IPokemonDetail;
 }
 
-const PokemonCard: React.FC<Props> = ({ pokemon }) => {
+const PokemonCard: React.FC<IProps> = ({ pokemon }) => {
   const [evolucionaDe, setEvolucionaDe] = useState<string | null>(null);
 
   useEffect(() => {
@@ -47,10 +47,11 @@ const PokemonCard: React.FC<Props> = ({ pokemon }) => {
           ))}
         </div>
         {evolucionaDe && (
+          <div className="titulo-evolucion">Evoluciona de:
           <div className="evolucion">
-            <p style={{ color: "#a17a2f", fontSize: "12px" }}>Evoluciona de:</p>
             <p>{evolucionaDe}</p>
           </div>
+           </div>
         )}
       </div>
     </div>
