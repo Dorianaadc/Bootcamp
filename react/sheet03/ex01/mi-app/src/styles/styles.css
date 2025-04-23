@@ -1,0 +1,276 @@
+body {
+    background-color: #FFE62C;
+    margin: 0;
+    font-family: ubuntu;
+}
+
+.orejas {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+
+.oreja-izquierda {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+    width: 60px;
+    height: 60px;
+    background: black;
+}
+
+.oreja-derecha{
+    margin-left: 1040px;
+    clip-path: polygon(100% 100%, 100% 0%, 0% 0%);
+    width: 60px;
+    height: 60px;
+    background: black;
+}
+
+
+.filtrador {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    padding: 20px;
+}
+
+input { 
+    width: 470px;
+    height: 40px;
+    text-align: center; 
+    border: 1px solid #dfdfdf;
+    background-color: #f8f3d2;
+    position: relative;
+    z-index: 10;
+}
+
+.tarjetas {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    padding: 10px;
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.tarjeta {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgb(93, 92, 92);
+    width: calc(33.33% - 10px);
+    max-width: 150px; 
+    margin: 5px; 
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    line-height: 0px;
+    text-transform:capitalize;
+}
+
+
+.imagen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self:normal;
+    background-color: #dfdfdf;
+}
+
+.texto-imagen {
+    display: flex;
+    align-self: start;
+    width: max-content;
+    background-color: #d1cdca;
+    padding: 5px; 
+    margin-bottom: 5px; 
+    color: #6b4807;
+    font-weight: bold;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px; 
+    margin-top: 5px; 
+    
+}
+
+.boton {
+    background-color: white;
+    border: 1px solid #a17a2f;
+    padding: 4px; 
+    cursor: pointer;
+    line-height: 10px;
+    font-size: 10px;
+    color: #a17a2f;
+    text-transform: uppercase;
+}
+
+.evolucion{
+   margin-bottom: 10px;
+   line-height: 0px;
+   font-size: 14px;
+   border-left: #6b4807 2px solid;
+   padding-left: 6px;
+   padding-top: 10px;
+   height: max-content;
+}
+
+.cachetes {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    bottom: -40px;
+}
+
+.cachete-izquierdo, .cachete-derecho {
+    clip-path: circle(50%);
+    width: 140px;
+    height: 140px;
+    background: #ea2a2a;
+}
+
+.cachete-izquierdo {
+    margin-left: -80px;
+}
+
+.cachete-derecho {
+    margin-right: -80px;
+}
+
+@media (width < 200px) {
+    .tarjetas {
+        width: 20%; 
+    }
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+    .oreja-derecha {
+        margin-right: -100px; 
+        
+    }
+    .oreja-izquierda {
+        margin-left: auto; 
+        margin-right: -50px;
+        
+    }
+    .cachete-izquierdo, .cachete-derecho{
+      margin-bottom: -30px;
+    }
+    input{
+        width: 50%;
+        font-size: 9px;
+    }
+    
+}
+
+@media (width < 320px) {
+    .tarjetas {
+        width: 40%; 
+    }
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+    .oreja-derecha {
+        margin-right: 0px; 
+        
+    }
+    .oreja-izquierda {
+        margin-left: auto; 
+        margin-right: -70px;
+        
+    }
+    .cachete-izquierdo, .cachete-derecho{
+      margin-bottom: -30px;
+    }
+    input{
+        width: 60%;
+        font-size: 9px;
+    }
+    
+}
+
+@media (width < 400px) {
+    .tarjetas {
+        width: 40%; 
+    }
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+    .oreja-derecha {
+        margin-right: 0px; 
+        
+    }
+    .oreja-izquierda {
+        margin-left: auto; 
+        margin-right: -100px;
+        
+    }
+    .cachete-izquierdo, .cachete-derecho{
+      margin-bottom: -30px;
+    }
+    input{
+        width: 50%;
+        font-size: 9px;
+    }
+    
+}
+
+@media (max-width: 667px) {
+    .tarjeta {
+        width: 50%; 
+    }
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+    .oreja-derecha {
+        margin-left: 370px; 
+    }
+    
+    input{
+        width: 50%;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 882px) {
+    .tarjeta {
+        width: 90%; 
+    }
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .oreja-derecha {
+        margin-left: 370px; 
+    }
+
+    input{
+        width: 50%;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .tarjeta {
+        width: 90%; 
+    }
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .oreja-derecha {
+        margin-left: 370px; 
+    }
+}
