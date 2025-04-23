@@ -85,10 +85,8 @@ input {
 .texto-imagen {
     display: flex;
     align-self: start;
-    width: max-content;
     background-color: #d1cdca;
-    padding: 5px; 
-    margin-bottom: 5px; 
+    padding: 10px; 
     color: #6b4807;
     font-weight: bold;
 }
