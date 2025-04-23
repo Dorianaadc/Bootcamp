@@ -1,5 +1,5 @@
 import React from 'react';
-import PokemonList from '../componentes/PokemonList.tsx';
+import PokemonList from '../components/PokemonList.tsx';
 
 const Home: React.FC = () => {
   return (

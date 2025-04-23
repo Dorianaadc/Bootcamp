@@ -48,17 +48,21 @@ input {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center; 
-    padding: 10px;
-    max-width: 800px; 
+    padding: 10px; 
     margin: 0 auto; 
 }
 
 .tarjeta {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgb(93, 92, 92);
-    width: calc(33.33% - 10px);
-    max-width: 150px; 
-    margin: 5px; 
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgb(93, 92, 92);
+  max-width: 150px; 
+  margin: 5px;
+  width: calc(90.33% - 10px);
+  min-height: 300px; 
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .contenido {
@@ -69,7 +73,6 @@ input {
     line-height: 0px;
     text-transform:capitalize;
 }
-
 
 .imagen {
     display: flex;
@@ -93,10 +96,9 @@ input {
 .botones {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    align-self: start;
     gap: 5px; 
-    margin-top: 5px; 
-    
+    padding-left: 10px;
 }
 
 .boton {
@@ -108,17 +110,25 @@ input {
     font-size: 10px;
     color: #a17a2f;
     text-transform: uppercase;
+    border-radius: 20px;
 }
 
-.evolucion{
-   margin-bottom: 10px;
-   line-height: 0px;
-   font-size: 14px;
-   border-left: #6b4807 2px solid;
-   padding-left: 6px;
-   padding-top: 10px;
-   height: max-content;
-}
+.titulo-evolucion {
+    color: #6b4807;
+    font-size: 12px;
+    margin-top: 20px;
+    padding-right: 50px;
+ }
+ 
+ .evolucion {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    border-left: #6b4807 2px solid;
+    height: max-content;
+ }
+ 
 
 .cachetes {
     display: flex;
