@@ -22,7 +22,7 @@ const PokemonCard: React.FC<Props> = ({ pokemon }) => {
           actual = actual.evolves_to[0];
           nombres.push(actual.species.name);
         }
-
+        
         const posicion = nombres.indexOf(pokemon.name.toLowerCase());
         if (posicion > 0) {
           setEvolucionaDe(nombres[posicion - 1]);
@@ -58,3 +58,8 @@ const PokemonCard: React.FC<Props> = ({ pokemon }) => {
 };
 
 export default PokemonCard;
+
+
+
+
+

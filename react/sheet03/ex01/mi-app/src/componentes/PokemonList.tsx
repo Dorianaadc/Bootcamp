@@ -5,6 +5,7 @@ import PokemonCard from './PokemonCards.tsx';
 
 const PokemonList: React.FC = () => {
   const [pokemons, setPokemons] = useState<PokemonDetail[]>([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     const getPokemons = async () => {
@@ -18,13 +19,30 @@ const PokemonList: React.FC = () => {
     getPokemons();
   }, []);
 
+  const filteredPokemons = pokemons.filter(p =>
+    p.name.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
-    <div className="tarjetas">
-      {pokemons.map(pokemon => (
-        <PokemonCard key={pokemon.id} pokemon={pokemon} />
-      ))}
+    <div>
+      <div className="filtrador">
+        <input
+          type="search"
+          name="filtrar"
+          id="filtrar"
+          placeholder="Filtra pokemons por nombre..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
+      <div className="tarjetas">
+        {filteredPokemons.map(pokemon => (
+          <PokemonCard key={pokemon.id} pokemon={pokemon} />
+        ))}
+      </div>
     </div>
   );
 };
 
 export default PokemonList;
+
