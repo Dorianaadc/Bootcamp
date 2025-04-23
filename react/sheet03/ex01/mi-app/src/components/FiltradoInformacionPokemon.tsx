@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { conexionApi, actualizarPokemon } from '../services/PokemonService.tsx';
 import { IPokemonDetail, IPokemon } from '../types/Pokemon.tsx';
-import PokemonCard from './PokemonCards.tsx';
+import PokemonCard from './TarjetasPokemon.tsx';
 import InformacionPokemon from './InformacionPokemon.tsx';
 
-const PokemonList: React.FC = () => {
+const FiltradoInformacionPokemon: React.FC = () => {
   const [pokemons, setPokemons] = useState<IPokemonDetail[]>([]);
   const [search, setSearch] = useState('');
   const [selectedPokemon, setSelectedPokemon] = useState<IPokemonDetail | null>(null);
@@ -69,5 +69,5 @@ const PokemonList: React.FC = () => {
   );
 };  
 
-export default PokemonList;
+export default FiltradoInformacionPokemon;
 

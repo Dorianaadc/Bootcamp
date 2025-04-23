@@ -6,7 +6,7 @@ interface IProps {
   pokemon: IPokemonDetail;
 }
 
-const PokemonCard: React.FC<IProps> = ({ pokemon }) => {
+const TarjetasPokemon: React.FC<IProps> = ({ pokemon }) => {
   const [evolucionaDe, setEvolucionaDe] = useState<string | null>(null);
 
   useEffect(() => {
@@ -58,7 +58,7 @@ const PokemonCard: React.FC<IProps> = ({ pokemon }) => {
   );
 };
 
-export default PokemonCard;
+export default TarjetasPokemon
 
 
 
