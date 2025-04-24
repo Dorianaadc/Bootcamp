@@ -55,9 +55,7 @@ input {
 .tarjeta {
   background-color: white;
   box-shadow: 0 4px 8px 0 rgb(93, 92, 92);
-  max-width: 150px; 
   margin: 5px;
-  width: calc(90.33% - 10px);
   min-height: 300px; 
   min-width: 150px;
   display: flex;
