@@ -105,21 +105,21 @@ SELECT title FROM movies order by title asc limit 5 OFFSET 5;
 
 
 
-#  Review 1 — Tasks
-## 1.1 List all the Canadian cities and their populations / Enumere todas las ciudades canadienses y sus poblaciones.
+#  Review 5 — Tasks
+## 5.1 List all the Canadian cities and their populations / Enumere todas las ciudades canadienses y sus poblaciones.
 SELECT city,population FROM north_american_cities WHERE country = 'Canada';
 
-## 1.2 Order all the cities in the United States by their latitude from north to south / Ordena todas las ciudades de Estados Unidos por su latitud de norte a sur.
+## 5.2 Order all the cities in the United States by their latitude from north to south / Ordena todas las ciudades de Estados Unidos por su latitud de norte a sur.
 SELECT city FROM north_american_cities WHERE country = 'United States' order by latitude desc;
 
-## 1.3 List all the cities west of Chicago, ordered from west to east / Enumere todas las ciudades al oeste de Chicago, ordenadas de oeste a este.
+## 5.3 List all the cities west of Chicago, ordered from west to east / Enumere todas las ciudades al oeste de Chicago, ordenadas de oeste a este.
 SELECT city, longitude FROM north_american_cities WHERE longitude < -87.629798
 ORDER BY longitude ASC;
 
-## 1.4 List the two largest cities in Mexico (by population) / Enumere las dos ciudades más grandes de México (por población)
+## 5.4 List the two largest cities in Mexico (by population) / Enumere las dos ciudades más grandes de México (por población)
 SELECT city,population FROM north_american_cities WHERE country = 'Mexico' order by population desc limit 2;
 
-## 1.5 List the third and fourth largest cities (by population) in the United States and 1. / Enumere la tercera y cuarta ciudades más grandes (por población) de los Estados Unidos y su población.
+## 5.5 List the third and fourth largest cities (by population) in the United States and 1. / Enumere la tercera y cuarta ciudades más grandes (por población) de los Estados Unidos y su población.
 SELECT city,population FROM north_american_cities WHERE country = 'United States' order by population desc limit 2 Offset 2;
 
 
