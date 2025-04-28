@@ -267,9 +267,27 @@ LEFT JOIN employees ON building_name = building
 WHERE role IS NULL;
 
 # Exercise 9 — Tasks
-## 9.1 List all movies and their combined sales in millions of dollars
+## 9.1 List all movies and their combined sales in millions of dollars / Enumere todas las películas y sus ventas combinadas en millones de dólares
+SELECT title, (domestic_sales + international_sales) / 1000000 
+FROM movies
+JOIN boxoffice ON movies.id = boxoffice.movie_id;
 
-## 9.2 List all movies and their ratings in percent
+## 9.2 List all movies and their ratings in percent / Enumere todas las películas y sus calificaciones en porcentaje
+SELECT title, rating * 10 AS percent
+FROM movies
+JOIN boxoffice ON movies.id = boxoffice.movie_id;
 
-## 9.3 List all movies that were released on even number years
 
+## 9.3 List all movies that were released on even number years / Enumere todas las películas que se estrenaron en años pares
+SELECT title, year
+FROM movies
+WHERE year % 2 = 0;
+
+# Exercise 10 — Tasks
+## 10.1 Find the longest time that an employee has been at the studio / Encuentra el tiempo más largo que un empleado ha estado en el estudio
+
+
+## 10.2 For each role, find the average number of years employed by employees in that role
+
+
+## 10.3 Find the total number of employee years worked in each building / Para cada rol, encuentre el número promedio de años empleados por los empleados en ese rol. /Encuentra el número total de años de trabajo de los empleados en cada edificio
