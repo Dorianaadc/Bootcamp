@@ -75,6 +75,14 @@ FOREIGN KEY (socio_id) REFERENCES socio(socio_num),
 FOREIGN KEY (cuota_id) REFERENCES cuota(cuota_id)
 );
 
+CREATE TABLE evento_disciplina (
+evento_id INT,
+disciplina_id INT,
+PRIMARY KEY (evento_id, disciplina_id),
+FOREIGN KEY (evento_id) REFERENCES evento(evento_id),
+FOREIGN KEY (disciplina_id) REFERENCES disciplina(disciplina_id)
+);
+
 -- Crea 5 socios.
 INSERT INTO socio (nombre, fecha_nacimiento,fecha_inscripcion, telefono, direccion)
 VALUES
