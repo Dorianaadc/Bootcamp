@@ -8,8 +8,8 @@ Comprueba en el main el uso de ambos. */
 
 public class Main {
     public static void main(String[] args) {
-    
-
+        Empleado empleado = new Empleado("Marta", 39, 5000.0,0);
+        System.out.println(empleado.mostrarDetalles());
             
         }
     }

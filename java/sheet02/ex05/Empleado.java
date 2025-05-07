@@ -12,7 +12,7 @@ public String mostrarDetalles() {
     }
     
 @Override
-public void impirmir() {
+public void imprimir() {
    System.out.println("Es un empleado");    
     }
 }

@@ -9,11 +9,11 @@ public static void main(String[] args) {
 
 Empleado empleado = new Empleado("Marta", 39, 5000.0);
 System.out.println(empleado.mostrarDetalles());
-empleado.impirmir();
+empleado.imprimir();
 
 Estudiante estudiante = new Estudiante("Ana", 20, "Ingenieria");
 System.out.println(estudiante.mostrarDetalles());
-estudiante.impirmir();
+estudiante.imprimir();
         
     }
 }

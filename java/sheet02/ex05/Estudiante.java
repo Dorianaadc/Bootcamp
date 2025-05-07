@@ -12,7 +12,7 @@ public class Estudiante extends Persona implements Imprimible{
         }
 
     @Override
-    public void impirmir() {
+    public void imprimir() {
         System.out.println("Es un estudiante");
     }
     }
