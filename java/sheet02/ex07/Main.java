@@ -10,6 +10,9 @@ public class Main {
     public static void main(String[] args) {
         Empleado empleado = new Empleado("Marta", 39, 5000.0,0);
         System.out.println(empleado.mostrarDetalles());
+        
+        Utilidades utilidades = new Utilidades();
+        System.out.println(utilidades.esMayorDeEdad(empleado));
             
         }
     }

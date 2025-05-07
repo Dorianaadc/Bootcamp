@@ -7,5 +7,19 @@ public static <U> U identidad(U valor) . */
 
 public class Main {
     public static void main(String[] args) {
+    
+        Caja<Persona> cajaPersona = new Caja<>();
+        cajaPersona.setContenido(new Persona("Juan",25));
+        System.out.println("Contenido de cajaPersona: " + cajaPersona.getContenido());
+
+        Caja<String> cajaString = new Caja<>();
+        cajaString.setContenido("Hola Mundo");
+        System.out.println("Contenido de cajaString: " + cajaString.getContenido());
+
+        String resultadoString = Utilidades.identidad("Texto");
+        Integer resultadoInt = Utilidades.identidad(10);
+
+        System.out.println("Resultado identidad (String): " + resultadoString);
+        System.out.println("Resultado identidad (Integer): " + resultadoInt);
     }
 }
