@@ -1,10 +1,10 @@
 public class Libro {
 
-String isbn;
-String titulo;
-int numPaginas;
-String autor;
-Boolean prestado;
+private String isbn;
+private String titulo;
+private int numPaginas;
+private String autor;
+private boolean prestado;
 
 public Libro(){
 
