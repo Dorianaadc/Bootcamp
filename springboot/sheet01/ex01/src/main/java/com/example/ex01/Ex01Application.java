@@ -1,9 +1,11 @@
+/* Ejercicio 1: Hola Mundo con Spring Boot
+Crea un proyecto básico de Spring Boot.
+Define un controlador con una ruta GET /hello .
+Responde con un mensaje plano como "Hola Mundo desde Spring Boot" . */
 package com.example.ex01;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @SpringBootApplication
 public class Ex01Application {
