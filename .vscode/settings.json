@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "java/sheet04/ex04",
+        "java/sheet04/ex03",
+        "java/sheet04/ex02",
+        "java/sheet04/ex01",
+        "springboot/sheet02/ex01/src/main/java/com/example/ex01"
+    ]
+}
