@@ -5,6 +5,7 @@ private final double PORCENTAJE40 = 40.0;
 private final double PORCENTAJE70 = 70.0;
 
 public ProductoFresco(){
+    super();
 }
 
 public ProductoFresco(String nombre, double precio, int caducidad) {
@@ -12,15 +13,21 @@ public ProductoFresco(String nombre, double precio, int caducidad) {
     this.caducidad = caducidad;
     }
 
-public double comprar(int cantidad){
-if(this.caducidad <= 5 ){
-    super.precio -= (super.precio * (this.PORCENTAJE40 / 100.0));
+public double comprar(int cantidad) {
+        double precioUnitario = getPrecio();
+        if (caducidad < 3) {
+            precioUnitario *= this.PORCENTAJE40;
+        } else if (caducidad <= 5) {
+            precioUnitario *= this.PORCENTAJE70;
+        }
+        return precioUnitario * cantidad;
+    }
 
-}else if (this.caducidad < 3) {
-    super.precio -= (super.precio * (this.PORCENTAJE70 / 100.0));
+@Override
+public String toString() {
+    return "ProductoFresco  " + "Productos nombre=" + super.nombre + ", precio=" + super.precio + " caducidad=" + caducidad;
 }
-return super.precio;
-}
+
 
 
 }

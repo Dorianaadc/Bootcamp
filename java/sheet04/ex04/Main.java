@@ -25,8 +25,17 @@ comprar: dada una cantidad, indicar el precio total
 Impleméntale a todas las clases el método toString . */
 
 public class Main {
-        public static void main(String[] args) {
+    public static void main(String[] args) {
+        Productos p = new Productos("Fresa", 10);
+        System.out.println(p);
+        System.out.println("Total compra: $" + p.comprar(2));
 
+        ProductoFresco pf = new ProductoFresco("Carne", 20, 3);
+        System.out.println(pf);
+        System.out.println("Total compra: $" + pf.comprar(3));
+
+        ProductoRefrigerado pr = new ProductoRefrigerado("Queso", 15, "Cajón 2B");
+        System.out.println(pr);
+        System.out.println("Total compra: $" + pr.comprar(2));
     }
-    
 }
