@@ -1,6 +1,6 @@
-
-import com.ejercicios.ex01.model.Frase;
-import com.ejercicios.ex01.repository.FraseRepository;
+package com.example.ex01.controller;
+import com.example.ex01.model.Frase;
+import com.example.ex01.repository.FraseRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

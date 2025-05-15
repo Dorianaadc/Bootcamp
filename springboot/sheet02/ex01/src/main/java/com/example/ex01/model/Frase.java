@@ -1,4 +1,4 @@
-package com.sheet02.ex01.model;
+package com.example.ex01.model;
 import jakarta.persistence.*;
 
 @Entity
