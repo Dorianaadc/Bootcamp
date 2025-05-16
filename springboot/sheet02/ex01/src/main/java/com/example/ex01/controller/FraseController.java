@@ -1,4 +1,5 @@
 package com.example.ex01.controller;
+
 import com.example.ex01.model.Frase;
 import com.example.ex01.repository.FraseRepository;
 import org.springframework.http.ResponseEntity;

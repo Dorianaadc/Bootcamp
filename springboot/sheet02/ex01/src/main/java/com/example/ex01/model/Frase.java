@@ -18,7 +18,6 @@ public class Frase {
         this.autor = autor;
     }
 
-    // Getters y Setters
     public Long getId() {
         return id;
     }
