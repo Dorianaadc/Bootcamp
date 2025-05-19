@@ -1,7 +1,6 @@
 package com.example.ex01.model;
 
 import jakarta.persistence.*;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,7 +19,11 @@ public class Estudiante {
             joinColumns = @JoinColumn(name = "estudiante_id"),
             inverseJoinColumns = @JoinColumn(name = "curso_id")
     )
-    private Set<Curso> curso = new HashSet<>();
+    private Set<Curso> cursos = new HashSet<>();
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "direccion_id", referencedColumnName = "id")
+    private Direccion direccion;
 
     public Estudiante() {
     }

@@ -14,7 +14,11 @@ public class Curso {
     private String descripcion;
 
     @ManyToMany(mappedBy = "cursos")
-    private Set<Estudiante> estudiante = new HashSet<>();
+    private Set<Estudiante> estudiantes = new HashSet<>();
+
+    @ManyToOne
+    @JoinColumn(name = "instructor_id")
+    private Instructor instructor;
 
     public Curso() {
     }

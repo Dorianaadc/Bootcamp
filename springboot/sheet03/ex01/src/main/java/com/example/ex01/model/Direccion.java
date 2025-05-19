@@ -1,5 +1,6 @@
 package com.example.ex01.model;
 import jakarta.persistence.*;
+
 @Entity
 public class Direccion {
     @Id
@@ -9,6 +10,9 @@ public class Direccion {
     private String calle;
     private String ciudad;
     private int codigoPostal;
+
+    @OneToOne(mappedBy = "direccion")
+    private Estudiante estudiante;
 
     public Direccion() {
     }
