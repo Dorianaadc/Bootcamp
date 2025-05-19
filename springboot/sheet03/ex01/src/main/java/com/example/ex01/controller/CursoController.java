@@ -20,7 +20,7 @@ public class CursoController {
         return cursoService.obtenerTodos();
     }
 
-    @GetMapping("/nombre/{nombre}")
+    @GetMapping("/buscar")
     public ResponseEntity<Curso> obtenerCursoPorNombre(@RequestParam String nombre) {
         return cursoService.obtenerPorNombre(nombre)
                 .map(ResponseEntity::ok)
