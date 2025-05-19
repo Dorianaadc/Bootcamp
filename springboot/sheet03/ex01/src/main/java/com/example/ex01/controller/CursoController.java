@@ -27,6 +27,15 @@ public class CursoController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/cursosPorInstructor")
+    public ResponseEntity<List<Curso>> obtenerCursosPorInstructor(@RequestParam String nombre) {
+        List<Curso> curso = cursoService.obtenerPorInstructor(nombre);
+        if (curso.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(curso);
+    }
+
     @GetMapping("/id/{id}")
     public ResponseEntity<Curso> obtenerCurso(@PathVariable Long id) {
         return cursoService.obtenerPorId(id)

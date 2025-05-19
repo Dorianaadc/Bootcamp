@@ -5,3 +5,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DireccionRepository extends JpaRepository<Direccion, Long> {}
+

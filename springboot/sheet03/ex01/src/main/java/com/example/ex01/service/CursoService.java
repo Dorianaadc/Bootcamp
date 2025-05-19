@@ -22,6 +22,10 @@ public class CursoService{
         return cursoRepository.findByNombre(nombre);
     }
 
+    public List<Curso> obtenerPorInstructor(String nombre) {
+        return cursoRepository.findByInstructorNombre(nombre);
+    }
+
     public Optional<Curso> obtenerPorId(Long id) {
         return cursoRepository.findById(id);
     }

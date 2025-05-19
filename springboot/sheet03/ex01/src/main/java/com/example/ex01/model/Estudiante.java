@@ -3,6 +3,9 @@ package com.example.ex01.model;
 import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
 
 @Entity
 public class Estudiante {
@@ -10,7 +13,11 @@ public class Estudiante {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "El nombre no puede estar en blanco")
     private String nombre;
+
+    @Email(message = "Debe ser un correo electrónico válido")
+    @NotBlank(message = "El correo electrónico no puede estar en blanco")
     private String email;
 
     @ManyToMany
@@ -56,5 +63,13 @@ public class Estudiante {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
     }
 }

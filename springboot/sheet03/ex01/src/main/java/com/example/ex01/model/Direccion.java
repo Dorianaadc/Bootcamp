@@ -1,5 +1,8 @@
 package com.example.ex01.model;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Max;
 
 @Entity
 public class Direccion {
@@ -8,7 +11,12 @@ public class Direccion {
     private Long id;
 
     private String calle;
+
+    @NotBlank(message = "La ciudad no puede estar en blanco")
     private String ciudad;
+
+    @Min(value = 10000, message = "El código postal debe tener al menos 5 dígitos")
+    @Max(value = 99999, message = "El código postal debe tener máximo 5 dígitos")
     private int codigoPostal;
 
     @OneToOne(mappedBy = "direccion")

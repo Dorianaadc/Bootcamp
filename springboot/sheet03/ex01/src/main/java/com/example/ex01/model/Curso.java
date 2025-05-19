@@ -1,6 +1,9 @@
 package com.example.ex01.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,7 +13,10 @@ public class Curso {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "El nombre no puede estar en blanco")
     private String nombre;
+
+    @Size(min = 10, message = "La descripción tiene que tener al menos 10 caracteres")
     private String descripcion;
 
     @ManyToMany(mappedBy = "cursos")
